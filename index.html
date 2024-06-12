@@ -171,32 +171,20 @@
       -->
 
       <nav class="navbar">
-
         <ul class="navbar-list">
-
           <li class="navbar-item">
-            
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link active" onclick="navigateToSection('about')">About</button>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" onclick="navigateToSection('resume')">Resume</button>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" onclick="navigateToSection('portfolio')">Portfolio</button>
           </li>
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li> -->
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" onclick="navigateToSection('contact')">Contact</button>
           </li>
-
         </ul>
-
       </nav>
 
 
@@ -207,7 +195,7 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+      <article id="about" class="about  active" data-page="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -675,7 +663,7 @@ Will continue to use for my WP projects
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+      <article id="resume" class="resume" data-page="resume">
 
         <header>
           <h2 class="h2 article-title">Resume</h2>
@@ -1353,6 +1341,54 @@ Will continue to use for my WP projects
       window.open(linkHref, '_blank');
     });
   });
+});
+
+  </script>
+  <script>
+    // main.js
+
+function navigateToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    // Scroll to the section
+    section.scrollIntoView({ behavior: 'smooth' });
+
+    // Update the URL without reloading the page
+    history.pushState(null, null, `#${sectionId}`);
+
+    // Update active class on the navbar links
+    updateActiveNavLink(sectionId);
+  }
+}
+
+function updateActiveNavLink(sectionId) {
+  const navLinks = document.querySelectorAll('.navbar-link');
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('onclick').includes(sectionId)) {
+      link.classList.add('active');
+    }
+  });
+}
+
+// Handle back/forward navigation
+window.addEventListener('popstate', function(event) {
+  const hash = window.location.hash.substring(1);
+  const section = document.getElementById(hash);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+    updateActiveNavLink(hash);
+  }
+});
+
+// Automatically scroll to the section if the page is loaded with a hash
+window.addEventListener('load', function() {
+  const hash = window.location.hash.substring(1);
+  const section = document.getElementById(hash);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+    updateActiveNavLink(hash);
+  }
 });
 
   </script>
