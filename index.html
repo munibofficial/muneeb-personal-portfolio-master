@@ -592,8 +592,8 @@
               </p>
 
               <div class="certificate-button">
-                <button id="download-button">Download</button>
-                <button id="verify-button">Verify</button>
+                <button id="download-button-react">Download</button>
+                <button id="verify-button-react">Verify</button>
               </div>
             </li>
 
@@ -608,8 +608,8 @@
               </p>
 
               <div class="certificate-button">
-                <button id="download-button">Download</button>
-                <button id="verify-button">Verify</button>
+                <button id="download-button-version">Download</button>
+                <button id="verify-button-version">Verify</button>
               </div>
             </li>
 
@@ -1364,6 +1364,62 @@
 
     document.getElementById("verify-button").addEventListener("click", function () {
       window.open("https://www.coursera.org/account/accomplishments/verify/U7YXRJCU27N9", "_blank"); // Replace with your verify link
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const eyeIcons = document.querySelectorAll(".eye-icon");
+
+      eyeIcons.forEach(function (eyeIcon) {
+        eyeIcon.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevents the default behavior of the click event
+
+          // Get the URL to redirect to (you can replace '#' with your desired URL)
+          const linkHref = event.target.closest("https://interactive-comments-section-master.vercel.app/").getAttribute("href");
+
+          // Open the link in a new tab
+          window.open(linkHref, '_blank');
+        });
+      });
+    });
+
+  </script>
+  <script>
+    document.getElementById("download-button-react").addEventListener("click", function () {
+      window.open("https://www.coursera.org/account/accomplishments/certificate/D9YB3WMWTAKA", "_blank"); // Replace with your download link
+      console.log("download press")
+    });
+
+    document.getElementById("verify-button-react").addEventListener("click", function () {
+      window.open("https://www.coursera.org/account/accomplishments/verify/D9YB3WMWTAKA", "_blank"); // Replace with your verify link
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const eyeIcons = document.querySelectorAll(".eye-icon");
+
+      eyeIcons.forEach(function (eyeIcon) {
+        eyeIcon.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevents the default behavior of the click event
+
+          // Get the URL to redirect to (you can replace '#' with your desired URL)
+          const linkHref = event.target.closest("https://interactive-comments-section-master.vercel.app/").getAttribute("href");
+
+          // Open the link in a new tab
+          window.open(linkHref, '_blank');
+        });
+      });
+    });
+
+  </script>
+  <script>
+    document.getElementById("download-button-version").addEventListener("click", function () {
+      window.open("https://www.coursera.org/account/accomplishments/certificate/YHZCQH8WQ3XL", "_blank"); // Replace with your download link
+      console.log("download press")
+    });
+
+    document.getElementById("verify-button-version").addEventListener("click", function () {
+      window.open("https://www.coursera.org/account/accomplishments/verify/YHZCQH8WQ3XL", "_blank"); // Replace with your verify link
     });
   </script>
   <script>
