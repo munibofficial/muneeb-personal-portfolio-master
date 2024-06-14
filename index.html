@@ -625,8 +625,8 @@
               </p>
 
               <div class="certificate-button">
-                <button id="download-button">Download</button>
-                <button id="verify-button">Verify</button>
+                <button id="download-button-react-ad">Download</button>
+                <button id="verify-button-react-ad">Verify</button>
               </div>
             </li>
 
@@ -640,8 +640,8 @@
               </p>
 
               <div class="certificate-button">
-                <button id="download-button">Download</button>
-                <button id="verify-button">Verify</button>
+                <button id="download-button-ui/ux">Download</button>
+                <button id="verify-button-ui/ux">Verify</button>
               </div>
             </li>
 
@@ -655,8 +655,8 @@
               </p>
 
               <div class="certificate-button">
-                <button id="download-button">Download</button>
-                <button id="verify-button">Verify</button>
+                <button id="download-button-capstone">Download</button>
+                <button id="verify-button-capstone">Verify</button>
               </div>
             </li>
             <li class="clients-item">
@@ -676,8 +676,8 @@
               </p>
 
               <div class="certificate-button">
-                <button id="download-button">Download</button>
-                <button id="verify-button">Verify</button>
+                <button id="download-button-depth">Download</button>
+                <button id="verify-button-depth">Verify</button>
               </div>
             </li>
 
@@ -1394,6 +1394,16 @@
       window.open("https://www.coursera.org/account/accomplishments/verify/D9YB3WMWTAKA", "_blank"); // Replace with your verify link
     });
   </script>
+   <script>
+    document.getElementById("download-button-react-ad").addEventListener("click", function () {
+      window.open("https://www.coursera.org/account/accomplishments/certificate/R5XMSLB629C9", "_blank"); // Replace with your download link
+      console.log("download press")
+    });
+
+    document.getElementById("verify-button-react-ad").addEventListener("click", function () {
+      window.open("https://www.coursera.org/account/accomplishments/verify/R5XMSLB629C9", "_blank"); // Replace with your verify link
+    });
+  </script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const eyeIcons = document.querySelectorAll(".eye-icon");
@@ -1422,6 +1432,39 @@
       window.open("https://www.coursera.org/account/accomplishments/verify/YHZCQH8WQ3XL", "_blank"); // Replace with your verify link
     });
   </script>
+
+   <script>
+    document.getElementById("download-button-ui/ux").addEventListener("click", function () {
+      window.open("https://www.coursera.org/account/accomplishments/certificate/Z222YXX35RDE", "_blank"); // Replace with your download link
+      console.log("download press")
+    });
+
+    document.getElementById("verify-button-ui/ux").addEventListener("click", function () {
+      window.open("https://www.coursera.org/account/accomplishments/verify/Z222YXX35RDE", "_blank"); // Replace with your verify link
+    });
+  </script>
+
+<script>
+  document.getElementById("download-button-capstone").addEventListener("click", function () {
+    window.open("https://www.coursera.org/account/accomplishments/certificate/Y52XD4YFWZNX", "_blank"); // Replace with your download link
+    console.log("download press")
+  });
+
+  document.getElementById("verify-button-capstone").addEventListener("click", function () {
+    window.open("https://www.coursera.org/account/accomplishments/verify/Y52XD4YFWZNX", "_blank"); // Replace with your verify link
+  });
+</script>
+<script>
+  document.getElementById("download-button-depth").addEventListener("click", function () {
+    window.open("https://www.coursera.org/account/accomplishments/certificate/V3ZEVPZTXC9Q", "_blank"); // Replace with your download link
+    console.log("download press")
+  });
+
+  document.getElementById("verify-button-depth").addEventListener("click", function () {
+    window.open("https://www.coursera.org/account/accomplishments/verify/V3ZEVPZTXC9Q", "_blank"); // Replace with your verify link
+  });
+</script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const eyeIcons = document.querySelectorAll(".eye-icon");
